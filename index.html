@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'/>
+    <title>Word Count</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="sortable.js"></script>
+</head>
+<body>
+
+    <div class="wrapper upload-btn-wrapper">
+        <button class="btn" id="lb">Upload a file</button>
+        <input type="file" id="csv" onchange="readFile(this)" />
+    </div>
+
+    <div class="loader" id="loader" style="display: none">Loading...</div>
+
+    <div class="wrapper" id="cards">
+        <div class="card">
+            <div class="container">
+                Raw Data: <br>
+                <output id="out"></output>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="container">
+                Word Count data: <br>
+                <processed-output id="final-output"></processed-output>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
